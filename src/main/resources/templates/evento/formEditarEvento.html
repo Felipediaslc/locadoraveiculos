@@ -29,17 +29,18 @@
 		    </div>
 		</nav>	
 	</header>
-	<form class="container" method="post">
-			Nome: <input type="text" value="" name="nome"/>
+	<form class="container" method="post" action="cadastrarEvento">
+			<input type="hidden" th:value="${evento.codigo}" name="codigo"/>
+			Nome: <input type="text" th:value="${evento.nome}" name="nome"/>
 			<div class="row">
 			<div class="input-field col s6">			
-			Local: <input type="text" value="" name="local"/>
+			Local: <input type="text" th:value="${evento.local}" name="local"/>
 			</div>
 			<div class="input-field col s3">
-			Data: <input type="text" value="" name="data"/>
+			Data: <input type="text" th:value="${evento.data}" name="data"/>
 			</div>
 			<div class="input-field col s3">
-			Horario: <input type="text" value="" name="horario"/>
+			Horario: <input type="text" th:value="${evento.horario}" name="horario"/>
 			</div>
 		</div>
 		<button class="waves-effect waves-light btn" type="submit">Salvar</button>

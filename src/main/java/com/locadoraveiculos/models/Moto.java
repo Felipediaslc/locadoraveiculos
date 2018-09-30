@@ -18,9 +18,9 @@ public class Moto {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private long id;
 
-	private Boolean cbs;
+	private boolean cbs;
 	private String cilindradas;
 	private String renavam;
 	private String modelo;
@@ -29,28 +29,28 @@ public class Moto {
 	private String anoFab;
 	private String anoMod;
 	private String cor;
-	private Boolean combGasolina;
-	private Boolean combEtanol;
-	private Boolean abs;
+	private boolean combGasolina;
+	private boolean combEtanol;
+	private boolean abs;
 	private String dataAquisicao;
 	private String localizacao;
 	private String porcentNivelComb;
-	private Boolean gps;
-	private Boolean alarme;
+	private boolean gps;
+	private boolean alarme;
 
-	public int getId() {
+	public long getId() {
 		return id;
 	}
 
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 
-	public Boolean getCbs() {
+	public boolean isCbs() {
 		return cbs;
 	}
 
-	public void setCbs(Boolean cbs) {
+	public void setCbs(boolean cbs) {
 		this.cbs = cbs;
 	}
 
@@ -118,27 +118,27 @@ public class Moto {
 		this.cor = cor;
 	}
 
-	public Boolean getCombGasolina() {
+	public boolean isCombGasolina() {
 		return combGasolina;
 	}
 
-	public void setCombGasolina(Boolean combGasolina) {
+	public void setCombGasolina(boolean combGasolina) {
 		this.combGasolina = combGasolina;
 	}
 
-	public Boolean getCombEtanol() {
+	public boolean isCombEtanol() {
 		return combEtanol;
 	}
 
-	public void setCombEtanol(Boolean combEtanol) {
+	public void setCombEtanol(boolean combEtanol) {
 		this.combEtanol = combEtanol;
 	}
 
-	public Boolean getAbs() {
+	public boolean isAbs() {
 		return abs;
 	}
 
-	public void setAbs(Boolean abs) {
+	public void setAbs(boolean abs) {
 		this.abs = abs;
 	}
 
@@ -166,19 +166,19 @@ public class Moto {
 		this.porcentNivelComb = porcentNivelComb;
 	}
 
-	public Boolean getGps() {
+	public boolean isGps() {
 		return gps;
 	}
 
-	public void setGps(Boolean gps) {
+	public void setGps(boolean gps) {
 		this.gps = gps;
 	}
 
-	public Boolean getAlarme() {
+	public boolean isAlarme() {
 		return alarme;
 	}
 
-	public void setAlarme(Boolean alarme) {
+	public void setAlarme(boolean alarme) {
 		this.alarme = alarme;
 	}
 

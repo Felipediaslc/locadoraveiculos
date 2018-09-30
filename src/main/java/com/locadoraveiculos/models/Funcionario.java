@@ -6,7 +6,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Classe que representa a abstração de todos os funcionários do sistema, inclusive seus respectivos endereços.
+ * Classe que representa a abstração de todos os funcionários do sistema,
+ * inclusive seus respectivos endereços.
+ * 
  * @author Widson.
  * @version 1.0.
  */
@@ -17,7 +19,7 @@ public class Funcionario {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private int id;
+	private long id;
 
 	private String tipo;
 	private String nome;
@@ -34,6 +36,14 @@ public class Funcionario {
 	private String endCep;
 	private String telefone;
 	private String email;
+
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
+	}
 
 	public String getTipo() {
 		return tipo;
@@ -153,14 +163,6 @@ public class Funcionario {
 
 	public void setEmail(String email) {
 		this.email = email;
-	}
-
-	public int getId() {
-		return id;
-	}
-
-	public void setId(int id) {
-		this.id = id;
 	}
 
 }

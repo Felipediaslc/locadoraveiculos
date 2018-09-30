@@ -26,19 +26,19 @@ public class Carro {
 	private String anoFab;
 	private String anoMod;
 	private String cor;
-	private Boolean combGasolina;
-	private Boolean combEtanol;
-	private Boolean abs;
+	private boolean combGasolina;
+	private boolean combEtanol;
+	private boolean abs;
 	private String dataAquisicao;
 	private String localizacao;
 	private String porcentNivelComb;
-	private Boolean combDiesel;
-	private Boolean combGnv;
-	private Boolean arCondicionado;
-	private Boolean vidroEletrico;
-	private Boolean gps;
-	private Boolean travas;
-	private Boolean alarme;
+	private boolean combDiesel;
+	private boolean combGnv;
+	private boolean arCondicionado;
+	private boolean vidroEletrico;
+	private boolean gps;
+	private boolean travas;
+	private boolean alarme;
 
 	public long getId() {
 		return id;
@@ -104,27 +104,27 @@ public class Carro {
 		this.cor = cor;
 	}
 
-	public Boolean getCombGasolina() {
+	public boolean isCombGasolina() {
 		return combGasolina;
 	}
 
-	public void setCombGasolina(Boolean combGasolina) {
+	public void setCombGasolina(boolean combGasolina) {
 		this.combGasolina = combGasolina;
 	}
 
-	public Boolean getCombEtanol() {
+	public boolean isCombEtanol() {
 		return combEtanol;
 	}
 
-	public void setCombEtanol(Boolean combEtanol) {
+	public void setCombEtanol(boolean combEtanol) {
 		this.combEtanol = combEtanol;
 	}
 
-	public Boolean getAbs() {
+	public boolean isAbs() {
 		return abs;
 	}
 
-	public void setAbs(Boolean abs) {
+	public void setAbs(boolean abs) {
 		this.abs = abs;
 	}
 
@@ -152,59 +152,59 @@ public class Carro {
 		this.porcentNivelComb = porcentNivelComb;
 	}
 
-	public Boolean getCombDiesel() {
+	public boolean isCombDiesel() {
 		return combDiesel;
 	}
 
-	public void setCombDiesel(Boolean combDiesel) {
+	public void setCombDiesel(boolean combDiesel) {
 		this.combDiesel = combDiesel;
 	}
 
-	public Boolean getCombGnv() {
+	public boolean isCombGnv() {
 		return combGnv;
 	}
 
-	public void setCombGnv(Boolean combGnv) {
+	public void setCombGnv(boolean combGnv) {
 		this.combGnv = combGnv;
 	}
 
-	public Boolean getArCondicionado() {
+	public boolean isArCondicionado() {
 		return arCondicionado;
 	}
 
-	public void setArCondicionado(Boolean arCondicionado) {
+	public void setArCondicionado(boolean arCondicionado) {
 		this.arCondicionado = arCondicionado;
 	}
 
-	public Boolean getVidroEletrico() {
+	public boolean isVidroEletrico() {
 		return vidroEletrico;
 	}
 
-	public void setVidroEletrico(Boolean vidroEletrico) {
+	public void setVidroEletrico(boolean vidroEletrico) {
 		this.vidroEletrico = vidroEletrico;
 	}
 
-	public Boolean getGps() {
+	public boolean isGps() {
 		return gps;
 	}
 
-	public void setGps(Boolean gps) {
+	public void setGps(boolean gps) {
 		this.gps = gps;
 	}
 
-	public Boolean getTravas() {
+	public boolean isTravas() {
 		return travas;
 	}
 
-	public void setTravas(Boolean travas) {
+	public void setTravas(boolean travas) {
 		this.travas = travas;
 	}
 
-	public Boolean getAlarme() {
+	public boolean isAlarme() {
 		return alarme;
 	}
 
-	public void setAlarme(Boolean alarme) {
+	public void setAlarme(boolean alarme) {
 		this.alarme = alarme;
 	}
 

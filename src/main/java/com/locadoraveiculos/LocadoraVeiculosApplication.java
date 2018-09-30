@@ -1,3 +1,4 @@
+ 	 
 package com.locadoraveiculos;
 
 import org.springframework.boot.SpringApplication;
@@ -10,3 +11,4 @@ public class LocadoraVeiculosApplication {
 		SpringApplication.run(LocadoraVeiculosApplication.class, args);
 	}
 }
+

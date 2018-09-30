@@ -6,24 +6,27 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Classe que representa a abstração de todas as agências do sistema, inclusive
+ * Classe que representa a abstração de todos os clientes do sistema, inclusive
  * seus respectivos endereços.
  * 
  * @author Widson.
  * @version 1.0.
  */
 @Entity
-public class Agencia {
+public class Cliente {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long codigo;
+	private long id;
 
-	private String nomeFantasia;
+	private String nome;
+	private String cpf;
 	private String cnpj;
-	private String inscEstadual;
+	private String rg;
+	private String dataNascimento;
+	private String naturalidade;
 	private String endRua;
 	private String endNumero;
 	private String endComplemento;
@@ -32,22 +35,30 @@ public class Agencia {
 	private String endUnidadeFederativa;
 	private String endCep;
 	private String telefone;
-	private String gerenteResponsavel;
+	private String email;
 
-	public long getCodigo() {
-		return codigo;
+	public long getId() {
+		return id;
 	}
 
-	public void setCodigo(long codigo) {
-		this.codigo = codigo;
+	public void setId(long id) {
+		this.id = id;
 	}
 
-	public String getNomeFantasia() {
-		return nomeFantasia;
+	public String getNome() {
+		return nome;
 	}
 
-	public void setNomeFantasia(String nomeFantasia) {
-		this.nomeFantasia = nomeFantasia;
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
 	}
 
 	public String getCnpj() {
@@ -58,12 +69,28 @@ public class Agencia {
 		this.cnpj = cnpj;
 	}
 
-	public String getInscEstadual() {
-		return inscEstadual;
+	public String getRg() {
+		return rg;
 	}
 
-	public void setInscEstadual(String inscEstadual) {
-		this.inscEstadual = inscEstadual;
+	public void setRg(String rg) {
+		this.rg = rg;
+	}
+
+	public String getDataNascimento() {
+		return dataNascimento;
+	}
+
+	public void setDataNascimento(String dataNascimento) {
+		this.dataNascimento = dataNascimento;
+	}
+
+	public String getNaturalidade() {
+		return naturalidade;
+	}
+
+	public void setNaturalidade(String naturalidade) {
+		this.naturalidade = naturalidade;
 	}
 
 	public String getEndRua() {
@@ -130,12 +157,12 @@ public class Agencia {
 		this.telefone = telefone;
 	}
 
-	public String getGerenteResponsavel() {
-		return gerenteResponsavel;
+	public String getEmail() {
+		return email;
 	}
 
-	public void setGerenteResponsavel(String gerenteResponsavel) {
-		this.gerenteResponsavel = gerenteResponsavel;
+	public void setEmail(String email) {
+		this.email = email;
 	}
 
 }
