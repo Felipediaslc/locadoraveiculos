@@ -32,28 +32,24 @@
 	<table class="container">
 		<thead>
 		<tr>
-		
+			<th>Código</th>
 			<th>Nome</th>
 			<th>Local</th>
 			<th>Data</th>
 			<th>Horário</th>
 			<th>Editar</th>
 			<th>Deletar</th>
-			
-			
 		</tr>
 		</thead>
 		<tbody>
 			<tr th:each="evento : ${eventos}">	
-	
+			<td><span th:text="${evento.codigo}"></span></td>
 			<td><span th:text="${evento.nome}"></span></td>
-			<td><span th:text="${evento.local}"></span></td>
+			<td><span th:text="${evento.local}"></span></td>			
 			<td><span th:text="${evento.data}"></span></td>
 			<td><span th:text="${evento.horario}"></span></td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarEvento(codigo=${evento.codigo})}"><i class="material-icons left">edit</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarEvento(codigo=${evento.codigo})}"><i class="material-icons left">delete</i></a></td>
-			
-
 			</tr>
 		</tbody>
 	</table>

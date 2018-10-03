@@ -27,16 +27,19 @@
 		    </div>
 		</nav>	
 	</header>
+	
 	<table class="container">
 		<thead>
 		<tr>
 			<th>Nome Fantasia</th>
 			<th>CNPJ</th>
+			<th>Inscrição Estadual</th>
 			<th>Rua</th>
 			<th>Número</th>
 			<th>Complemento</th>
 			<th>Bairro</th>
 			<th>Cidade</th>
+			<th>UF</th>
 			<th>CEP</th>
 			<th>Telefone</th>
 			<th>Gerente Responsável</th>
@@ -44,11 +47,12 @@
 			<th>Deletar</th>
 		</tr>
 		</thead>
-		
 		<tbody>
 			<tr th:each="agencia : ${agencias}">	
+
 			<td><span th:text="${agencia.nomeFantasia}"></span></td>
 			<td><span th:text="${agencia.cnpj}"></span></td>
+			<td><span th:text="${agencia.inscEstadual}"></span></td>
 			<td><span th:text="${agencia.endRua}"></span></td>
 			<td><span th:text="${agencia.endNumero}"></span></td>
 			<td><span th:text="${agencia.endComplemento}"></span></td>

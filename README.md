@@ -1,28 +1,15 @@
 # locadoraveiculos
-Projeto de um sistema WEB de uma locadora de veículos.
+Locadora Noca é uma locadora de veículos fictícia que representa uma implementação de uma solução em software consistente e funcional de uma locadora de veículos convencional como aplicação WEB. A Noca Corporation dispõe de automóveis e motocicletas. Os planos são baseados no modelo e características dos veículos. Os planos são de A a G para automóveis e A a D para motocicletas.
 
 # Informações Úteis
 Utilizar o MySql versão 8 instalado na máquina.
-Criar manualmente um database denominado locadoranoca (create database locadoranoca;
+Criar manualmente um database denominado locadoranoca (create database locadoranoca;) antes de iniciar a aplicação.
 Login do MySql: root
 Senha do MySql: 123456
-Para qualquer outra observbação, inspecionar o arquibo "application.properties".
+Para qualquer outra observbação, inspecionar o arquibo "application.properties" e também o "pom.xml".
 
-# Notas da Versão
-Commit 5: Implementação do CRUD. 
-Esta versão dispõe da interface do usuário, ainda em construção. Está sendo utilizada uma divisão piloto do projeto para fins de testes e implementação, denominada de EVENTOS(CRUD). A ideia é utilizar como primeiras versões de testes e aprendizado, para a partir daí, o projeto ser implementado como uma locadora de veículos. Até o presente momento, apenas o CRUD de Eventos está funcionando. As demais opções estão em construção.
-
-Commit 4: Update README.md
-Foi criado este arquivo para auxiliar na importação do projeto e explicitar os passos a serem seguidos para configuração dos parâmetros.
-
-Commit 3: Implementação do Springboot
-Refatoração do projeto para uso do Springboot. Utilização de um template básico e adaptação do projeto já existente para este modelo.
-
-Commit 2: Implementação do Springboot
-Refatoração do projeto para uso do Springboot. Utilização de um template básico e adaptação do projeto já existente para este modelo.
-
-Commit 1: First commit.
-Esta versão dispõe de uma construção simples de um banco de dados modelado em mySql. O Script para a geração da base de dados encontra-se na pasta BD.
+# Notas desta Versão
+O projeto consiste de um subtemplate que é desenvolvido como piloto para qualquer mudança no restante do projeto(denominado de Eventos). Ou seja, qualquer mudança que o software venha a sofrer, deve passar primeiro por esta etapa para ser replicado para o projeto de fato. Atualmente o subtemplate apresenta os seguintes elementos do CRUD devidamente implementados: Adicionar evento, remover evento e editar evento. O projeto apresenta as mesmas funções para a entidade Agencia.
 
 
 

@@ -7,9 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
 import com.locadoraveiculos.models.Agencia;
-import com.locadoraveiculos.models.Evento;
 import com.locadoraveiculos.repository.AgenciaRepository;
 
 @Controller
@@ -25,9 +23,11 @@ public class AgenciaController {
 	@RequestMapping(value = "/cadastrarAgencia", method = RequestMethod.POST)
 	public String cadastrarAgencia(Agencia agencia) {
 		ar.save(agencia);
+		
 		return "redirect:/agencias";
 	}
 	
+
 	@RequestMapping("/agencias")
 	public ModelAndView listaAgencias() {
 		ModelAndView mv = new ModelAndView("agencia/agencias");
@@ -41,16 +41,16 @@ public class AgenciaController {
 	public String deletarAgencia(@RequestParam("codigo") long codigo) {
 		Agencia agencia = ar.findByCodigo(codigo);
 		ar.delete(agencia);
-		return "redirect:/agencias";
+		return "redirect:/agencias";		
 	}
-
+	
 	@RequestMapping(value = "/editarAgencia", method = RequestMethod.GET)
 	public ModelAndView editarAgencia(@ModelAttribute("codigo") long codigo) {
-		Agencia agencia = ar.findByCodigo(codigo);
+		Agencia agencia = ar.findByCodigo(codigo);		
 		ModelAndView m = new ModelAndView();
 		m.setViewName("/agencia/formEditarAgencia");
-		m.addObject("agencias", agencia);
-		return m;
+		m.addObject("agencia", agencia);
+		return m;	
 	}
 
 }

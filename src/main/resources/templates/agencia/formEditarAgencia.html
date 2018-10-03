@@ -29,43 +29,41 @@
 	</header>
 
 	<form class="container" method="post" action="cadastrarAgencia">
-	<input type="hidden" th:value="${agencia.codigo}" name="codigo"/>
+			<input type="hidden" th:value="${agencia.codigo}" name="codigo"/>
+			Nome Fantasia: <input type="text" th:value="${agencia.nomeFantasia}" name="nomeFantasia" />
 			<div class="row">
 			<div class="input-field col s6">
-			Nome Fantasia: <input type="text" value="${agencia.nomeFantasia}" name="nomeFantasia" />
-			</div>
-			<div class="input-field col s3">
-			Telefone: <input type="text" value="${agencia.telefone}" name="telefone" />
+			Telefone: <input type="text" th:value="${agencia.telefone}" name="telefone" />
 			</div>
 			<div class="input-field col s3">			
-			CNPJ: <input type="text" value="${agencia.cnpj}" name="cnpj" />
+			CNPJ: <input type="text" th:value="${agencia.cnpj}" name="cnpj" />
 			</div>
 			<div class="input-field col s4">
-			Inscrição Estadual: <input type="text" value="${agencia.inscEstadual}" name="inscEstadual" />
+			Inscrição Estadual: <input type="text" th:value="${agencia.inscEstadual}" name="inscEstadual" />
 			</div>
 			<div class="input-field col s8">
-			Gerente Responsável: <input type="text" value="${agencia.gerenteResponsavel}" name="gerenteResponsavel" />						
+			Gerente Responsável: <input type="text" th:value="${agencia.gerenteResponsavel}" name="gerenteResponsavel" />						
 			</div>
 			<div class="input-field col s5">			
-			Rua: <input type="text" value="${agencia.endRua}" name="endRua" />
+			Rua: <input type="text" th:value="${agencia.endRua}" name="endRua" />
 			</div>
 			<div class="input-field col s1">
-			Número: <input type="text" value="${agencia.endNumero}" name="endNumero" />
+			Número: <input type="text" th:value="${agencia.endNumero}" name="endNumero" />
 			</div>
 			<div class="input-field col s4">
-			Complemento: <input type="text" value="${agencia.endComplemento}" name="endComplemento" />
+			Complemento: <input type="text" th:value="${agencia.endComplemento}" name="endComplemento" />
 			</div>
 			<div class="input-field col s2">
-			Bairro: <input type="text" value="${agencia.endBairro}" name="endBairro" />
+			Bairro: <input type="text" th:value="${agencia.endBairro}" name="endBairro" />
 			</div>
 			<div class="input-field col s4">
-			Cidade: <input type="text" value="${agencia.endCidade}" name="endCidade" />
+			Cidade: <input type="text" th:value="${agencia.endCidade}" name="endCidade" />
 			</div>
 			<div class="input-field col s2">
-			Unidade Federativa:<input type="text" value="${agencia.endUnidadeFederativa}" name="endUnidadeFederativa" />
+			Unidade Federativa:<input type="text" th:value="${agencia.endUnidadeFederativa}" name="endUnidadeFederativa" />
 			</div>
 			<div class="input-field col s2">
-			CEP: <input type="text" value="${agencia.endCep}" name="endCep" />
+			CEP: <input type="text" th:value="${agencia.endCep}" name="endCep" />
 			</div>
 		</div>
 		<button class="waves-effect waves-light btn" type="submit">Salvar</button>	
