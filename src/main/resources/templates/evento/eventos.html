@@ -31,8 +31,7 @@
 	
 	<table class="container">
 		<thead>
-		<tr>
-			<th>Código</th>
+		<tr>			
 			<th>Nome</th>
 			<th>Local</th>
 			<th>Data</th>
@@ -42,8 +41,7 @@
 		</tr>
 		</thead>
 		<tbody>
-			<tr th:each="evento : ${eventos}">	
-			<td><span th:text="${evento.codigo}"></span></td>
+			<tr th:each="evento : ${eventos}">				
 			<td><span th:text="${evento.nome}"></span></td>
 			<td><span th:text="${evento.local}"></span></td>			
 			<td><span th:text="${evento.data}"></span></td>

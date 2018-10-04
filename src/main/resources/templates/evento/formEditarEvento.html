@@ -37,13 +37,14 @@
 			Local: <input type="text" th:value="${evento.local}" name="local"/>
 			</div>
 			<div class="input-field col s3">
-			Data: <input type="text" th:value="${evento.data}" name="data"/>
+			Data: <input type="date" th:value="${evento.data}" name="data"/>
 			</div>
 			<div class="input-field col s3">
-			Horario: <input type="text" th:value="${evento.horario}" name="horario"/>
+			Horario: <input type="time" th:value="${evento.horario}" name="horario"/>
 			</div>
 		</div>
-		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
+		<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
+		<a href="/eventos" class="waves-effect waves-light btn"><i class="material-icons left">cancel</i>Cancelar</a>
 	</form>
 		
 		
