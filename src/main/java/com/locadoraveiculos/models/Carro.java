@@ -1,9 +1,12 @@
 package com.locadoraveiculos.models;
 
+import java.io.Serializable;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+
+import org.hibernate.annotations.Type;
 
 /**
  * Classe que representa a abstra��o de todos os carros do sistema.
@@ -17,7 +20,7 @@ public class Carro {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private long codigo;
 
 	private String renavam;
 	private String modelo;
@@ -26,26 +29,36 @@ public class Carro {
 	private String anoFab;
 	private String anoMod;
 	private String cor;
+	@Type(type = "numeric_boolean")
 	private boolean combGasolina;
+	@Type(type = "numeric_boolean")
 	private boolean combEtanol;
+	@Type(type = "numeric_boolean")
 	private boolean abs;
 	private String dataAquisicao;
 	private String localizacao;
 	private String porcentNivelComb;
+	@Type(type = "numeric_boolean")
 	private boolean combDiesel;
+	@Type(type = "numeric_boolean")
 	private boolean combGnv;
+	@Type(type = "numeric_boolean")
 	private boolean arCondicionado;
+	@Type(type = "numeric_boolean")
 	private boolean vidroEletrico;
+	@Type(type = "numeric_boolean")
 	private boolean gps;
+	@Type(type = "numeric_boolean")
 	private boolean travas;
+	@Type(type = "numeric_boolean")
 	private boolean alarme;
 
-	public long getId() {
-		return id;
+	public long getCodigo() {
+		return codigo;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getRenavam() {
@@ -104,11 +117,11 @@ public class Carro {
 		this.cor = cor;
 	}
 
-	public boolean isCombGasolina() {
+	public Boolean getCombGasolina() {
 		return combGasolina;
 	}
 
-	public void setCombGasolina(boolean combGasolina) {
+	public void setCombGasolina(Boolean combGasolina) {
 		this.combGasolina = combGasolina;
 	}
 

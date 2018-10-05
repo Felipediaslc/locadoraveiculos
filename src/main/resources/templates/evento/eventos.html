@@ -36,8 +36,9 @@
 			<th>Local</th>
 			<th>Data</th>
 			<th>Horário</th>
+			<th>Bom</th>
 			<th>Editar</th>
-			<th>Deletar</th>
+			<th>Deletar</th>			
 		</tr>
 		</thead>
 		<tbody>
@@ -46,6 +47,7 @@
 			<td><span th:text="${evento.local}"></span></td>			
 			<td><span th:text="${evento.data}"></span></td>
 			<td><span th:text="${evento.horario}"></span></td>
+			<td><span th:text="${evento.bom}"></span></td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarEvento(codigo=${evento.codigo})}"><i class="material-icons left">edit</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarEvento(codigo=${evento.codigo})}"><i class="material-icons left">delete</i></a></td>
 			</tr>
