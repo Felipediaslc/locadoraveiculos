@@ -6,8 +6,8 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 /**
- * Classe que representa a abstração de todos os clientes do sistema, inclusive
- * seus respectivos endereços.
+ * Classe que representa a abstração de todos os clientes do sistema,
+ * inclusive seus respectivos endereços.
  * 
  * @author Widson.
  * @version 1.0.
@@ -19,7 +19,7 @@ public class Cliente {
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private long codigo;
 
 	private String nome;
 	private String cpf;
@@ -37,12 +37,12 @@ public class Cliente {
 	private String telefone;
 	private String email;
 
-	public long getId() {
-		return id;
+	public long getCodigo() {
+		return codigo;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getNome() {

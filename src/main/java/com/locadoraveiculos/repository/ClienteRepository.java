@@ -4,5 +4,5 @@ import org.springframework.data.repository.CrudRepository;
 import com.locadoraveiculos.models.Cliente;
 
 public interface ClienteRepository extends CrudRepository<Cliente, String>{
-
+	Cliente findByCodigo(long codigo);
 }

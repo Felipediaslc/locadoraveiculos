@@ -40,7 +40,7 @@
 			Data: <input type="date" th:value="${evento.data}" name="data"/>
 			</div>
 			<div class="input-field col s3">
-			Horario: <input type="time" value="${evento.horario}" name="horario"/>			
+			Horario: <input type="time" th:value="${evento.horario}" name="horario"/>			
 			</div>
 			<label><input type="checkbox" th:checked="${evento.bom}" name="bom" /><span>Bom</span></label>
 		</div>

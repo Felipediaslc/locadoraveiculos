@@ -28,60 +28,59 @@
 		</nav>	
 	</header>
 
-	<form class="container" method="post">
+	<form class="container" method="post" action="cadastrarCliente">
+				<input type="hidden" th:value="${cliente.codigo}" name="codigo"/>
 				<div class="row">
 				<div class="input-field col s6">
-				Nome: <input type="text" value="" name="nome" />
+				Nome: <input type="text" th:value="${cliente.nome}" name="nome" />				
 				</div>
 				<div class="input-field col s3">
-				Telefone: <input type="text" value="" name="telefone" />
+				Telefone: <input type="text" th:value="${cliente.telefone}" name="telefone" />
 				</div>
 				<div class="input-field col s3">				
-				Data de Nascimento: <input type="date" value="" name="dataNascimento" />
+				Data de Nascimento: <input type="date" th:value="${cliente.dataNascimento}" name="dataNascimento" />
 				</div>
 				<div class="input-field col s3">
-				E-mail: <input type="text" value="" name="email" />
+				E-mail: <input type="text" th:value="${cliente.email}" name="email" />
 				</div>
 				<div class="input-field col s2">			
-				CNPJ: <input type="text" value="" name="cnpj" />
+				CNPJ: <input type="text" th:value="${cliente.cnpj}" name="cnpj" />
 				</div>
 				<div class="input-field col s2">
-				CPF: <input type="text" value="" name="cpf" />
+				CPF: <input type="text" th:value="${cliente.cpf}" name="cpf" />
 				</div>
 				<div class="input-field col s2">				
-				RG: <input type="text" value="" name="rg" />				
+				RG: <input type="text" th:value="${cliente.rg}" name="rg" />				
 				</div>
 				<div class="input-field col s3">				
-				Naturalidade: <input type="text" value="" name="naturalidade" />
+				Naturalidade: <input type="text" th:value="${cliente.naturalidade}" name="naturalidade" />
 				</div>
 				<div class="input-field col s5">			
-				Rua: <input type="text" value="" name="endRua" />
+				Rua: <input type="text" th:value="${cliente.endRua}" name="endRua" />
 				</div>
 				<div class="input-field col s1">
-				Número: <input type="text" value="" name="endNumero" />
+				Número: <input type="text" th:value="${cliente.endNumero}" name="endNumero" />
 				</div>
 				<div class="input-field col s4">
-				Complemento: <input type="text" value="" name="endComplemento" />
+				Complemento: <input type="text" th:value="${cliente.endComplemento}" name="endComplemento" />
 				</div>
 				<div class="input-field col s2">
-				Bairro: <input type="text" value="" name="endBairro" />
+				Bairro: <input type="text" th:value="${cliente.endBairro}" name="endBairro" />
 				</div>
 				<div class="input-field col s4">
-				Cidade: <input type="text" value="" name="endCidade" />
+				Cidade: <input type="text" th:value="${cliente.endCidade}" name="endCidade" />
 				</div>
 				<div class="input-field col s2">
-				Unidade Federativa:<input type="text" value="" name="endUnidadeFederativa" />
+				Unidade Federativa:<input type="text" th:value="${cliente.endUnidadeFederativa}" name="endUnidadeFederativa" />
 				</div>
-				<div class="input-field col s2">
-				CEP: <input type="text" value="" name="endCep" />
-								
+				<div class="input-field col s2">				
+				CEP: <input type="text" th:value="${cliente.endCep}" name="endCep" />
 				</div>
-			</div>
-		<button class="waves-effect waves-light btn" type="submit">Salvar</button>
+				</div>
+			<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
+		<a href="/clientes" class="waves-effect waves-light btn"><i class="material-icons left">cancel</i>Cancelar</a>
 	</form>
-	
-	
-		
+				
 <!--JavaScript at end of body for optimized loading-->
 <script type="text/javascript" src="js/materialize.min.js"></script>
 </body>

@@ -45,6 +45,8 @@
 				<th>CEP</th>
 				<th>Telefone</th>
 				<th>E-mail</th>			
+				<th>Editar</th>
+				<th>Deletar</th>
 			</tr>
 		</thead>
 		
@@ -65,6 +67,8 @@
 				<td><span th:text="${cliente.endCep}"></span></td>
 				<td><span th:text="${cliente.telefone}"></span></td>
 				<td><span th:text="${cliente.email}"></span></td>
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarCliente(codigo=${cliente.codigo})}"><i class="material-icons left">edit</i> </a> </td>
+				<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarCliente(codigo=${cliente.codigo})}"><i class="material-icons left">delete</i></a></td>
 			</tr>
 		</tbody>
 	</table>
