@@ -47,6 +47,8 @@
 				<th>CEP</th>
 				<th>Telefone</th>
 				<th>E-mail</th>	
+				<th>Salvar</th>
+				<th>Deletar</th>
 				
 				
 			</tr>
@@ -69,6 +71,8 @@
 					<td><span th:text="${funcionario.endCep}"></span></td>
 					<td><span th:text="${funcionario.telefone}"></span></td>
 					<td><span th:text="${funcionario.email}"></span></td>
+					<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarFuncionario(codigo=${funcionario.codigo})}"><i class="material-icons left">edit</i> </a> </td>
+					<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarFuncionario(codigo=${funcionario.codigo})}"><i class="material-icons left">delete</i></a></td>
 					</tr>
 				</tbody>
 		</table>

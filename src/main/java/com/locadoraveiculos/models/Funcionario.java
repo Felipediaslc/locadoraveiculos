@@ -1,5 +1,7 @@
 package com.locadoraveiculos.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -13,18 +15,19 @@ import javax.persistence.Id;
  * @version 1.0.
  */
 @Entity
-public class Funcionario {
+public class Funcionario implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private long codigo;
 
 	private String tipo;
 	private String nome;
 	private String cpf;
 	private String rg;
+	private String cnpj;
 	private String dataNascimento;
 	private String naturalidade;
 	private String endRua;
@@ -37,12 +40,12 @@ public class Funcionario {
 	private String telefone;
 	private String email;
 
-	public long getId() {
-		return id;
+	public long getCodigo() {
+		return codigo;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
 
 	public String getTipo() {
@@ -75,6 +78,14 @@ public class Funcionario {
 
 	public void setRg(String rg) {
 		this.rg = rg;
+	}
+
+	public String getCnpj() {
+		return cnpj;
+	}
+
+	public void setCnpj(String cnpj) {
+		this.cnpj = cnpj;
 	}
 
 	public String getDataNascimento() {
