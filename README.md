@@ -44,6 +44,7 @@ Navegar até o diretório que encontra-se a pasta do projeto que foi extraído (
 
 ```
 File > Import >  Maven > Existing Maven Projects (next) > Finish
+```
 
 ## Informações de Configuração dos Pacotes
 
