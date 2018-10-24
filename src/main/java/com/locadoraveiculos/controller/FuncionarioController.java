@@ -18,7 +18,7 @@ public class FuncionarioController {
 
 	@RequestMapping(value = "/cadastrarFuncionario", method = RequestMethod.GET)
 	public String cadastrarFuncionario() {
-		return "funcionario/formFuncionario";
+		return "funcionario/formCadastrarFuncionario";
 	}
 
 	@RequestMapping(value = "/cadastrarFuncionario", method = RequestMethod.POST)
@@ -43,10 +43,19 @@ public class FuncionarioController {
 	}
 
 	@RequestMapping(value = "/editarFuncionario", method = RequestMethod.GET)
-	public ModelAndView editarEvento(@ModelAttribute("codigo") long codigo) {
+	public ModelAndView editarFuncionario(@ModelAttribute("codigo") long codigo) {
 		Funcionario funcionario = fr.findByCodigo(codigo);
 		ModelAndView m = new ModelAndView();
 		m.setViewName("/funcionario/formEditarFuncionario");
+		m.addObject("funcionario", funcionario);
+		return m;
+	}
+	
+	@RequestMapping(value = "/visualizarFuncionario", method = RequestMethod.GET)
+	public ModelAndView visualizarFuncionario(@ModelAttribute("codigo") long codigo) {
+		Funcionario funcionario = fr.findByCodigo(codigo);
+		ModelAndView m = new ModelAndView();
+		m.setViewName("/funcionario/formVisualizarFuncionario");
 		m.addObject("funcionario", funcionario);
 		return m;
 	}

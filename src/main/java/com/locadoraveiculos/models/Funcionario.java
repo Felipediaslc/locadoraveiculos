@@ -23,11 +23,10 @@ public class Funcionario implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
 
-	private String tipo;
+	private String cargo;
 	private String nome;
-	private String cpf;
 	private String rg;
-	private String cnpj;
+	private String cpf;
 	private String dataNascimento;
 	private String naturalidade;
 	private String endRua;
@@ -48,12 +47,12 @@ public class Funcionario implements Serializable {
 		this.codigo = codigo;
 	}
 
-	public String getTipo() {
-		return tipo;
+	public String getCargo() {
+		return cargo;
 	}
 
-	public void setTipo(String tipo) {
-		this.tipo = tipo;
+	public void setCargo(String cargo) {
+		this.cargo = cargo;
 	}
 
 	public String getNome() {
@@ -64,28 +63,12 @@ public class Funcionario implements Serializable {
 		this.nome = nome;
 	}
 
-	public String getCpf() {
-		return cpf;
-	}
-
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
-	}
-
 	public String getRg() {
 		return rg;
 	}
 
 	public void setRg(String rg) {
 		this.rg = rg;
-	}
-
-	public String getCnpj() {
-		return cnpj;
-	}
-
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
 	}
 
 	public String getDataNascimento() {
@@ -176,4 +159,11 @@ public class Funcionario implements Serializable {
 		this.email = email;
 	}
 
+	public String getCpf() {
+		return cpf;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
 }

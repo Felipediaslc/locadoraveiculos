@@ -1,4 +1,3 @@
- 	 
 package com.locadoraveiculos;
 
 import org.springframework.boot.SpringApplication;

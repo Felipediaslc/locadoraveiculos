@@ -17,13 +17,14 @@ public class Evento implements Serializable {
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private long codigo;
 
+	@Type(type = "numeric_boolean")
+	private boolean bom;
+
 	private String nome;
 	private String local;
 	private String data;
 	private String horario;
-	
-	@Type(type = "numeric_boolean")
-	private boolean bom;
+	private String cor;
 
 	public long getCodigo() {
 		return codigo;
@@ -31,6 +32,14 @@ public class Evento implements Serializable {
 
 	public void setCodigo(long codigo) {
 		this.codigo = codigo;
+	}
+
+	public boolean isBom() {
+		return bom;
+	}
+
+	public void setBom(boolean bom) {
+		this.bom = bom;
 	}
 
 	public String getNome() {
@@ -65,11 +74,12 @@ public class Evento implements Serializable {
 		this.horario = horario;
 	}
 
-	public boolean getBom() {
-		return bom;
+	public String getCor() {
+		return cor;
 	}
 
-	public void setBom(boolean bom) {
-		this.bom = bom;
+	public void setCor(String cor) {
+		this.cor = cor;
 	}
+
 }

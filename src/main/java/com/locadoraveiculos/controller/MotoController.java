@@ -2,11 +2,11 @@ package com.locadoraveiculos.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
-
-import com.locadoraveiculos.models.Funcionario;
 import com.locadoraveiculos.models.Moto;
 import com.locadoraveiculos.repository.MotoRepository;
 
@@ -17,7 +17,7 @@ public class MotoController {
 
 	@RequestMapping(value = "/cadastrarMoto", method = RequestMethod.GET)
 	public String cadastrarCarro() {
-		return "moto/formCadastrarMoto";
+		return "moto/formMoto";
 	}
 
 	@RequestMapping(value = "/cadastrarMoto", method = RequestMethod.POST)
@@ -26,18 +26,28 @@ public class MotoController {
 		return "redirect:/motos";
 	}
 	
-//	@RequestMapping(value="/exibirMotos", method=RequestMethod.GET)
-//	public String exibirMotos() {
-//		return "moto/motos";
-//	}
-	
 	@RequestMapping("/motos")
 	public ModelAndView listaMotos() {
 		ModelAndView mv = new ModelAndView("moto/motos");
 		Iterable<Moto> motos = mr.findAll();
 		mv.addObject("motos", motos);
-		return mv;
-		
+		return mv;		
+	}
+	
+	@RequestMapping("/deletarMoto")
+	public String deletarMoto(@RequestParam("codigo") long codigo) {
+		Moto moto = mr.findByCodigo(codigo);
+		mr.delete(moto);
+		return "redirect:/motos";		
+	}
+	
+	@RequestMapping(value = "/editarMoto", method = RequestMethod.GET)
+	public ModelAndView editarMoto(@ModelAttribute("codigo") long codigo) {
+		Moto moto = mr.findByCodigo(codigo);		
+		ModelAndView m = new ModelAndView();
+		m.setViewName("/moto/formEditarMoto");
+		m.addObject("moto", moto);
+		return m;	
 	}
 
 }

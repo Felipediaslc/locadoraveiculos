@@ -1,5 +1,7 @@
 package com.locadoraveiculos.models;
 
+import java.io.Serializable;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -12,13 +14,13 @@ import javax.persistence.Id;
  * @version 1.0.
  */
 @Entity
-public class Moto {
+public class Moto implements Serializable {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
-	private long id;
+	private long codigo;
 
 	private boolean cbs;
 	private String cilindradas;
@@ -38,12 +40,12 @@ public class Moto {
 	private boolean gps;
 	private boolean alarme;
 
-	public long getId() {
-		return id;
+	public long getCodigo() {
+		return codigo;
 	}
 
-	public void setId(long id) {
-		this.id = id;
+	public void setCodigo(long codigo) {
+		this.codigo = codigo;
 	}
 
 	public boolean isCbs() {

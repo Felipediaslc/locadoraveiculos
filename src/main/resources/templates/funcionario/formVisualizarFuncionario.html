@@ -31,52 +31,52 @@
 			<input type="hidden" th:value="${funcionario.codigo}" name="codigo"/>
 				<div class="row">
 				<div class="input-field col s4">
-				Nome:<input type="text" th:value="${funcionario.nome}" name="nome"/>
+				Nome:<input type="text" th:value="${funcionario.nome}" name="nome"disabled/>
 				</div>				
 				<div class="input-field col s2">				
-				RG: <input type="text" th:value="${funcionario.rg}" name="rg" />	
+				RG: <input type="text" th:value="${funcionario.rg}" name="rg" disabled/>	
 				</div>	
 				<div class="input-field col s2">				
-				CPF: <input type="text" th:value="${funcionario.cpf}" name="cpf" />	
+				CPF: <input type="text" th:value="${funcionario.cpf}" name="cpf" disabled/>	
 				</div>
 				<div class="input-field col s3">
 				Cargo
 				<p>
-					<label><input class="with-gap" th:checked='${funcionario.cargo.equals("funcionario")}' value= "funcionario" name="cargo" type="radio" /><span>Funcionário</span></label>
-				   	<label><input class="with-gap" th:checked='${funcionario.cargo.equals("gerente")}' value= "gerente" name="cargo" type="radio" /><span>Gerente</span></label>
+					<label><input class="with-gap" th:checked='${funcionario.cargo.equals("funcionario")}' value= "funcionario" name="cargo" type="radio" disabled/><span>Funcionário</span></label>
+				   	<label><input class="with-gap" th:checked='${funcionario.cargo.equals("gerente")}' value= "gerente" name="cargo" type="radio" disabled/><span>Gerente</span></label>
 			  	</p>			  	
 				</div>				
 				<div class="input-field col s2">	
-				Telefone: <input type="text" th:value="${funcionario.telefone}" name="telefone" />
+				Telefone: <input type="text" th:value="${funcionario.telefone}" name="telefone" disabled/>
 				</div>				
 				<div class="input-field col s3">
-				Email: <input type="text" th:value="${funcionario.email}" name="email" />
+				Email: <input type="text" th:value="${funcionario.email}" name="email" disabled/>
 				</div>				
 				<div class="input-field col s2">				
-				Data de Nascimento: <input type="date" th:value="${funcionario.dataNascimento}" name="dataNascimento" />													
+				Data de Nascimento: <input type="date" th:value="${funcionario.dataNascimento}" name="dataNascimento" disabled/>													
 				</div>				
 				<div class="input-field col s3">				
-				Naturalidade: <input type="text" th:value="${funcionario.naturalidade}" name="naturalidade" />
+				Naturalidade: <input type="text" th:value="${funcionario.naturalidade}" name="naturalidade" disabled/>
 				</div>				
 				<div class="input-field col s4">			
-				Rua: <input type="text" th:value="${funcionario.endRua}" name="endRua" />
+				Rua: <input type="text" th:value="${funcionario.endRua}" name="endRua" disabled/>
 				</div>				
 				<div class="input-field col s1">
-				Número: <input type="text" th:value="${funcionario.endNumero}" name="endNumero" />
+				Número: <input type="text" th:value="${funcionario.endNumero}" name="endNumero" disabled/>
 				</div>				
 				<div class="input-field col s2">
-				Complemento: <input type="text" th:value="${funcionario.endComplemento}" name="endComplemento" />
+				Complemento: <input type="text" th:value="${funcionario.endComplemento}" name="endComplemento" disabled/>
 				</div>				
 				<div class="input-field col s3">
-				Bairro: <input type="text" th:value="${funcionario.endBairro}" name="endBairro" />
+				Bairro: <input type="text" th:value="${funcionario.endBairro}" name="endBairro" disabled/>
 				</div>				
 				<div class="input-field col s4">
-				Cidade: <input type="text" th:value="${funcionario.endCidade}" name="endCidade" />
+				Cidade: <input type="text" th:value="${funcionario.endCidade}" name="endCidade" disabled/>
 				</div>				
 				<div class="input-field col s3"> 
 				Estado
 				<p>				    
-				  <select class="browser-default" name="endUnidadeFederativa">				    				  
+				  <select class="browser-default" name="endUnidadeFederativa"disabled>				    
 				    <option th:selected='${funcionario.endUnidadeFederativa.equals("AC")}'value="AC">Acre</option>
 					<option th:selected='${funcionario.endUnidadeFederativa.equals("AL")}'value="AL">Alagoas</option>
 					<option th:selected='${funcionario.endUnidadeFederativa.equals("AP")}'value="AP">Amapá</option>
@@ -108,12 +108,12 @@
 				<p/>				    				   
 				</div>				
 				<div class="input-field col s2">
-				CEP: <input type="text" th:value="${funcionario.endCep}" name="endCep" />
+				CEP: <input type="text" th:value="${funcionario.endCep}" name="endCep" disabled/>
 				</div>				
 											
 				</div>				
-		<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
-		<a href="/funcionarios" class="waves-effect waves-light btn"><i class="material-icons left">cancel</i>Cancelar</a>
+		
+		<a href="/funcionarios" class="waves-effect waves-light btn"><i class="material-icons left">arrow_back</i>Voltar</a>
 	</form>
 	
 	
