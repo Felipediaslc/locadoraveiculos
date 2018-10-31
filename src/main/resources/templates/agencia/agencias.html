@@ -32,17 +32,12 @@
 		<thead>
 		<tr>
 			<th>Nome Fantasia</th>
-			<th>CNPJ</th>
-			<th>Inscrição Estadual</th>
-			<th>Rua</th>
-			<th>Número</th>
-			<th>Complemento</th>
-			<th>Bairro</th>
+			<th>CNPJ</th>		
 			<th>Cidade</th>
-			<th>UF</th>
-			<th>CEP</th>
+			<th>UF</th>			
 			<th>Telefone</th>
 			<th>Gerente Responsável</th>
+			<th>Visualizar</th>
 			<th>Editar</th>
 			<th>Deletar</th>
 		</tr>
@@ -50,18 +45,13 @@
 		<tbody>
 			<tr th:each="agencia : ${agencias}">	
 
-			<td><span th:text="${agencia.nomeFantasia}"></span></td>
-			<td><span th:text="${agencia.cnpj}"></span></td>
-			<td><span th:text="${agencia.inscEstadual}"></span></td>
-			<td><span th:text="${agencia.endRua}"></span></td>
-			<td><span th:text="${agencia.endNumero}"></span></td>
-			<td><span th:text="${agencia.endComplemento}"></span></td>
-			<td><span th:text="${agencia.endBairro}"></span></td>
-			<td><span th:text="${agencia.endCidade}"></span></td>
-			<td><span th:text="${agencia.endUnidadeFederativa}"></span></td>
-			<td><span th:text="${agencia.endCep}"></span></td>
+			<td><span th:text="${agencia.nomefantasia}"></span></td>
+			<td><span th:text="${agencia.cnpj}"></span></td>			
+			<td><span th:text="${agencia.endcidade}"></span></td>
+			<td><span th:text="${agencia.endunidadefederativa}"></span></td>
 			<td><span th:text="${agencia.telefone}"></span></td>
-			<td><span th:text="${agencia.gerenteResponsavel}"></span></td>
+			<td><span th:text="${agencia.gerenteresponsavel}"></span></td>
+			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/visualizarAgencia(codigo=${agencia.codigo})}"><i class="material-icons left">view_agenda</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarAgencia(codigo=${agencia.codigo})}"><i class="material-icons left">edit</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarAgencia(codigo=${agencia.codigo})}"><i class="material-icons left">delete</i></a></td>
 			</tr>

@@ -34,21 +34,17 @@
 		<tr>			
 			<th>Modelo</th>
 			<th>Marca</th>
-			<th>Cilindradas</th>
-			<th>Renavam</th>
-			<th>Potência</th>
-			<th>Ano Fabricação</th>
+			<th>Cilindradas</th>			
+			<th>Potência</th>			
 			<th>Ano Modelo</th>
-			<th>Cor</th>
-			<th>Data Aquisição</th>
-			<th>Localização</th>
-			<th>Nível de Combustível</th>			
+			<th>Cor</th>									
 			<th>Gasolina</th>
 			<th>Etanol</th>
 			<th>ABS</th>
 			<th>CBS</th>
 			<th>GPS</th>			
 			<th>Alarme</th>
+			<th>Visualizar</th>
 			<th>Editar</th>
 			<th>Deletar</th>
 		</tr>
@@ -58,20 +54,16 @@
 			<td><span th:text="${moto.modelo}"></span></td>
 			<td><span th:text="${moto.marca}"></span></td>
 			<td><span th:text="${moto.cilindradas}"></span></td>
-			<td><span th:text="${moto.renavam}"></span></td>
 			<td><span th:text="${moto.potencia}"></span></td>
-			<td><span th:text="${moto.anoFab}"></span></td>
-			<td><span th:text="${moto.anoMod}"></span></td>
+			<td><span th:text="${ moto.anomod}"></span></td>
 			<td><span th:text="${moto.cor}"></span></td>
-			<td><span th:text="${moto.dataAquisicao}"></span></td>
-			<td><span th:text="${moto.localizacao}"></span></td>
-			<td><span th:text="${moto.porcentNivelComb}"></span></td>
-			<td><span th:text="${moto.combGasolina}"></span></td>
-			<td><span th:text="${moto.combEtanol}"></span></td>		
-			<td><span th:text="${moto.abs}"></span></td>
-			<td><span th:text="${moto.cbs}"></span></td>
-			<td><span th:text="${moto.gps}"></span></td>
-			<td><span th:text="${moto.alarme}"></span></td>
+			<td><span th:text="${true == moto.combgasolina ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == moto.combetanol ? 'Sim' : 'Não' }"></span></td>		
+			<td><span th:text="${true == moto.abs ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == moto.cbs ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == moto.gps ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == moto.alarme ? 'Sim' : 'Não' }"></span></td>
+			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/visualizarMoto(codigo=${moto.codigo})}"><i class="material-icons left">view_agenda</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarMoto(codigo=${moto.codigo})}"><i class="material-icons left">edit</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarMoto(codigo=${moto.codigo})}"><i class="material-icons left">delete</i></a></td>
 		</tr>

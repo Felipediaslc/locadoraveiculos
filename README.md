@@ -5,8 +5,27 @@ A Noca Corporation dispõe de automóveis e motocicletas. Os planos são baseado
 Os planos são de A a G para automóveis e A a D para motocicletas.
 
 ## Notas desta Versão
-O projeto apresenta cinco CRUDs. sendo eles EVENTOS, AGENCIAS, CARROS, CLIENTES e FUNCIONÁRIOS. A camada EVENTOS é utilizada como template para o restante do projeto, bem como para os testes de funconalidades.
-Toda e qualquer mudança no projeto, passa primeiro por EVENTOS para melhorar a confiabilidade e o funcionamento das demais camadas. Ao término da produção do projeto, a camda EVENTOS não fará mais parte do projeto.
+O projeto apresenta seis CRUDs. sendo eles LOCAÇÕES, AGENCIAS, CARROS, MOTOS, CLIENTES e FUNCIONÁRIOS. A camada EVENTOS foi retirada nesta versão, pois esta não é mais utilizada como template para o restante do projeto.
+Todos os CRUDS estão operando corretamente, exceto o LOCAÇÕES, pois este encontra-se parcialmente implementado. Porém, é possível CRIAR e VISUALIZAR os respectivos valores, tanto na aplicação, quanto na base de dados.
+
+o JavaDocs encontra-se na seguinte pasta abaixo:
+
+```
+/doc
+```
+
+O arquivo para insersão da base de dados encontra-se no seguinte diretório abaixo:
+
+```
+\src\main\resources
+```
+
+Para que este arquivo de script opere automaticamente, é necessário configurar o arquivo application.properties para o modo "create-drop" apenas na primeira execução. A partir da segunda, recomenda-se o uso do "update".
+
+```
+spring.jpa.hibernate.ddl-auto = create-drop
+spring.jpa.hibernate.ddl-auto = update
+```
 
 ## Começando
 

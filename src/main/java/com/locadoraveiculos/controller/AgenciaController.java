@@ -17,7 +17,7 @@ public class AgenciaController {
 
 	@RequestMapping(value = "/cadastrarAgencia", method = RequestMethod.GET)
 	public String cadastrarAgencia() {
-		return "agencia/formAgencia";
+		return "agencia/formCadastrarAgencia";
 	}
 
 	@RequestMapping(value = "/cadastrarAgencia", method = RequestMethod.POST)
@@ -49,6 +49,15 @@ public class AgenciaController {
 		Agencia agencia = ar.findByCodigo(codigo);		
 		ModelAndView m = new ModelAndView();
 		m.setViewName("/agencia/formEditarAgencia");
+		m.addObject("agencia", agencia);
+		return m;	
+	}
+	
+	@RequestMapping(value = "/visualizarAgencia", method = RequestMethod.GET)
+	public ModelAndView visualizarAgencia(@ModelAttribute("codigo") long codigo) {
+		Agencia agencia = ar.findByCodigo(codigo);		
+		ModelAndView m = new ModelAndView();
+		m.setViewName("/agencia/formVisualizarAgencia");
 		m.addObject("agencia", agencia);
 		return m;	
 	}

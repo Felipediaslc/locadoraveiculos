@@ -53,64 +53,63 @@
 				Email: <input type="text" th:value="${funcionario.email}" name="email" />
 				</div>				
 				<div class="input-field col s2">				
-				Data de Nascimento: <input type="date" th:value="${funcionario.dataNascimento}" name="dataNascimento" />													
+				Data de Nascimento: <input type="date" th:value="${funcionario.datanascimento}" name="datanascimento" />													
 				</div>				
 				<div class="input-field col s3">				
 				Naturalidade: <input type="text" th:value="${funcionario.naturalidade}" name="naturalidade" />
 				</div>				
 				<div class="input-field col s4">			
-				Rua: <input type="text" th:value="${funcionario.endRua}" name="endRua" />
+				Rua: <input type="text" th:value="${funcionario.endrua}" name="endrua" />
 				</div>				
 				<div class="input-field col s1">
-				Número: <input type="text" th:value="${funcionario.endNumero}" name="endNumero" />
+				Número: <input type="text" th:value="${funcionario.endnumero}" name="endnumero" />
 				</div>				
 				<div class="input-field col s2">
-				Complemento: <input type="text" th:value="${funcionario.endComplemento}" name="endComplemento" />
+				Complemento: <input type="text" th:value="${funcionario.endcomplemento}" name="endcomplemento" />
 				</div>				
 				<div class="input-field col s3">
-				Bairro: <input type="text" th:value="${funcionario.endBairro}" name="endBairro" />
+				Bairro: <input type="text" th:value="${funcionario.endbairro}" name="endbairro" />
 				</div>				
 				<div class="input-field col s4">
-				Cidade: <input type="text" th:value="${funcionario.endCidade}" name="endCidade" />
+				Cidade: <input type="text" th:value="${funcionario.endcidade}" name="endcidade" />
 				</div>				
 				<div class="input-field col s3"> 
 				Estado
 				<p>				    
-				  <select class="browser-default" name="endUnidadeFederativa">				    				  
-				    <option th:selected='${funcionario.endUnidadeFederativa.equals("AC")}'value="AC">Acre</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("AL")}'value="AL">Alagoas</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("AP")}'value="AP">Amapá</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("AM")}'value="AM">Amazonas</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("BA")}'value="BA">Bahia</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("CE")}'value="CE">Ceará</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("DF")}'value="DF">Distrito Federal</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("ES")}'value="ES">Espírito Santo</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("GO")}'value="GO">Goiás</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("MA")}'value="MA">Maranhão</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("MT")}'value="MT">Mato Grosso</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("MS")}'value="MS">Mato Grosso do Sul</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("MG")}'value="MG">Minas Gerais</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("PA")}'value="PA">Pará</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("PB")}'value="PB">Paraíba</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("PR")}'value="PR">Paraná</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("PE")}'value="PE">Pernambuco</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("PI")}'value="PI">Piauí</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("RJ")}'value="RJ">Rio de Janeiro</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("RN")}'value="RN">Rio Grande do Norte</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("RS")}'value="RS">Rio Grande do Sul</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("RO")}'value="RO">Rondônia</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("RR")}'value="RR">Roraima</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("SC")}'value="SC">Santa Catarina</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("SP")}'value="SP">São Paulo</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("SE")}'value="SE">Sergipe</option>
-					<option th:selected='${funcionario.endUnidadeFederativa.equals("TO")}'value="TO">Tocantins</option>				    
+				  <select class="browser-default" name="endunidadefederativa">				    
+				    <option th:selected='${funcionario.endunidadefederativa.equals("AC")}'value="AC">Acre</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("AL")}'value="AL">Alagoas</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("AP")}'value="AP">Amapá</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("AM")}'value="AM">Amazonas</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("BA")}'value="BA">Bahia</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("CE")}'value="CE">Ceará</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("DF")}'value="DF">Distrito Federal</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("ES")}'value="ES">Espírito Santo</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("GO")}'value="GO">Goiás</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("MA")}'value="MA">Maranhão</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("MT")}'value="MT">Mato Grosso</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("MS")}'value="MS">Mato Grosso do Sul</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("MG")}'value="MG">Minas Gerais</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("PA")}'value="PA">Pará</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("PB")}'value="PB">Paraíba</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("PR")}'value="PR">Paraná</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("PE")}'value="PE">Pernambuco</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("PI")}'value="PI">Piauí</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("RJ")}'value="RJ">Rio de Janeiro</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("RN")}'value="RN">Rio Grande do Norte</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("RS")}'value="RS">Rio Grande do Sul</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("RO")}'value="RO">Rondônia</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("RR")}'value="RR">Roraima</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("SC")}'value="SC">Santa Catarina</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("SP")}'value="SP">São Paulo</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("SE")}'value="SE">Sergipe</option>
+					<option th:selected='${funcionario.endunidadefederativa.equals("TO")}'value="TO">Tocantins</option>				    
 				  </select>
 				<p/>				    				   
 				</div>				
 				<div class="input-field col s2">
-				CEP: <input type="text" th:value="${funcionario.endCep}" name="endCep" />
-				</div>				
-											
+				CEP: <input type="text" th:value="${funcionario.endcep}" name="endcep" />
+				</div>															
 				</div>				
 		<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
 		<a href="/funcionarios" class="waves-effect waves-light btn"><i class="material-icons left">cancel</i>Cancelar</a>

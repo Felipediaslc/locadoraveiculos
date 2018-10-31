@@ -17,7 +17,7 @@ public class MotoController {
 
 	@RequestMapping(value = "/cadastrarMoto", method = RequestMethod.GET)
 	public String cadastrarCarro() {
-		return "moto/formMoto";
+		return "moto/formCadastrarMoto";
 	}
 
 	@RequestMapping(value = "/cadastrarMoto", method = RequestMethod.POST)
@@ -48,6 +48,15 @@ public class MotoController {
 		m.setViewName("/moto/formEditarMoto");
 		m.addObject("moto", moto);
 		return m;	
+	}
+	
+	@RequestMapping(value = "/visualizarMoto", method = RequestMethod.GET)
+	public ModelAndView visualizarMoto(@ModelAttribute("codigo") long codigo) {
+		Moto moto = mr.findByCodigo(codigo);
+		ModelAndView m = new ModelAndView();
+		m.setViewName("/moto/formVisualizarMoto");
+		m.addObject("moto", moto);
+		return m;
 	}
 
 }

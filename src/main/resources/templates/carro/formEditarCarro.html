@@ -29,7 +29,7 @@
 	</header>
 	
 	<form class="container" method="post" action="cadastrarCarro">
-			<input type="hidden" th:value="${carro.codigo}" name="codigo"/>
+			<input type="hidden" th:value="${carro.codigo}" name="codigo" />
 			<div class="row">
 			<div class="input-field col s5">
 			Modelo: <input type="text" th:value="${carro.modelo}" name="modelo" />			
@@ -44,10 +44,10 @@
 			Potência: <input type="text" th:value="${carro.potencia}" name="potencia" />
 			</div>
 			<div class="input-field col s2">
-			Ano de Fabricação: <input type="text" th:value="${carro.anoFab}" name="anoFab" />
+			Ano de Fabricação: <input type="text" th:value="${carro.anofab}" name="anofab" />
 			</div>
 			<div class="input-field col s2">
-			Ano do Modelo: <input type="text" th:value="${carro.anoMod}" name="anoMod" />
+			Ano do Modelo: <input type="text" th:value="${carro.anomod}" name="anomod" />
 			</div>
 			<div class="input-field col s2">
 			Cor: <input type="text" th:value="${carro.cor}" name="cor" />
@@ -56,17 +56,17 @@
 			Localização: <input type="text" th:value="${carro.localizacao}" name="localizacao" />
 			</div>
 			<div class="input-field col s2">
-			Nível de Combustível: <input type="text" th:value="${carro.porcentNivelComb}" name="porcentNivelComb" />
+			Nível de Combustível: <input type="text" th:value="${carro.porcentnivelcomb}" name="porcentnivelcomb" />
 			</div>
 			<div class="input-field col s2">
-			Data de Aquisição: <input type="date" th:value="${carro.dataAquisicao}" name="dataAquisicao" />
+			Data de Aquisição: <input type="date" th:value="${carro.dataaquisicao}" name="dataaquisicao" />
 			</div>
 			<div class="input-field col s3.5">
 			Combustíveis: <p>
-				<label><input type="checkbox" th:checked="${carro.combGasolina}" name="combGasolina"/><span>Gasolina</span></label>
-				<label><input type="checkbox" th:checked="${carro.combEtanol}" name="combEtanol"/><span>Etanol</span></label>
-				<label><input type="checkbox" th:checked="${carro.combDiesel}" name="combDiesel"/><span>Diesel</span></label>
-				<label><input type="checkbox" th:checked="${carro.combGnv}" name="combGnv"/><span>GNV</span></label>
+				<label><input type="checkbox" th:checked="${carro.combgasolina}" name="combgasolina"/><span>Gasolina</span></label>
+				<label><input type="checkbox" th:checked="${carro.combetanol}" name="combetanol"/><span>Etanol</span></label>
+				<label><input type="checkbox" th:checked="${carro.combdiesel}" name="combdiesel"/><span>Diesel</span></label>
+				<label><input type="checkbox" th:checked="${carro.combgnv}" name="combgnv"/><span>GNV</span></label>
 			</p>
 			</div>
 			<div class="input-field col s3.5">
@@ -79,8 +79,8 @@
 			<div class="input-field col s3.5">
 			
 			Acessórios<p>
-				<label><input type="checkbox" th:checked="${carro.arCondicionado}" name="arCondicionado"/><span>Ar Condicionado</span></label>
-				<label><input type="checkbox" th:checked="${carro.vidroEletrico}" name="vidroEletrico"/><span>Vidro Elétrico</span></label>
+				<label><input type="checkbox" th:checked="${carro.arcondicionado}" name="arcondicionado"/><span>Ar Condicionado</span></label>
+				<label><input type="checkbox" th:checked="${carro.vidroeletrico}" name="vidroeletrico"/><span>Vidro Elétrico</span></label>
 				<label><input type="checkbox" th:checked="${carro.gps}" name="gps"/><span>GPS</span></label>
 			</p>
 			</div>

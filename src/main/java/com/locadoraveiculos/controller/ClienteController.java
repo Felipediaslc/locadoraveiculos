@@ -18,7 +18,7 @@ public class ClienteController {
 
 	@RequestMapping(value = "/cadastrarCliente", method = RequestMethod.GET)
 	public String cadastrarCliente() {
-		return "cliente/formCliente";
+		return "cliente/formCadastrarCliente";
 	}
 
 	@RequestMapping(value = "/cadastrarCliente", method = RequestMethod.POST)
@@ -49,6 +49,15 @@ public class ClienteController {
 		m.setViewName("/cliente/formEditarCliente");
 		m.addObject("cliente", cliente);
 		return m;	
+	}
+	
+	@RequestMapping(value = "/visualizarCliente", method = RequestMethod.GET)
+	public ModelAndView visualizarCliente(@ModelAttribute("codigo") long codigo) {
+		Cliente cliente = clr.findByCodigo(codigo);
+		ModelAndView m = new ModelAndView();
+		m.setViewName("/cliente/formVisualizarCliente");
+		m.addObject("cliente", cliente);
+		return m;
 	}
 
 }

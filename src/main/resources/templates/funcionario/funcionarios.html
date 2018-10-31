@@ -29,29 +29,20 @@
 		</nav>	
 	</header>
 		<table class="container">
-			<thead>
-			<tr>
-				<th>Nome</th>
+		<div class="row">
+		
+			<thead>			
+			<tr>				
+				<th>Nome</th>				
 				<th>Cargo</th>
-				<th>RG</th>
-				<th>CPF</th>	
-				<th>Data Nascimento</th>						
-				<th>Telefone</th>
-				<th>Email</th>
-				
-				<!-- <th>Naturalidade</th>
-				<th>Rua</th>
-				<th>Número</th>
-				<th>Complemento</th>
-				<th>Bairro</th>
-				<th>Cidade</th>
-				<th>UF</th> -->
-				
-				<th>Visualizar</th>	
-				<th>Editar</th>
+				<th>RG</th>				
+				<th>CPF</th>					
+				<th>Data Nascimento</th>									
+				<th>Telefone</th>				
+				<th>Email</th>				
+				<th>Visualizar</th>					
+				<th>Editar</th>				
 				<th>Deletar</th>
-				
-				
 			</tr>
 			</thead>
 				<tbody>
@@ -60,21 +51,9 @@
 					<td><span th:text="${funcionario.cargo}"></span></td>	
 					<td><span th:text="${funcionario.rg}"></span></td>
 					<td><span th:text="${funcionario.cpf}"></span></td>	
-					<td><span th:text="${funcionario.dataNascimento}"></span></td>	
+					<td><span th:text="${funcionario.datanascimento}"></span></td>	
 					<td><span th:text="${funcionario.telefone}"></span></td>
 					<td><span th:text="${funcionario.email}"></span></td>
-					
-					
-					<!-- <td><span th:text="${funcionario.naturalidade}"></span></td> -->							
-					<!-- <td><span th:text="${funcionario.endRua}"></span></td>
-					<td><span th:text="${funcionario.endNumero}"></span></td>
-					<td><span th:text="${funcionario.endComplemento}"></span></td>
-					<td><span th:text="${funcionario.endBairro}"></span></td>
-					<td><span th:text="${funcionario.endCidade}"></span></td>
-					<td><span th:text="${funcionario.endUnidadeFederativa}"></span></td>
-					<td><span th:text="${funcionario.endCep}"></span></td> -->				
-								
-					
 					<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/visualizarFuncionario(codigo=${funcionario.codigo})}"><i class="material-icons left">view_agenda</i> </a> </td>
 					<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarFuncionario(codigo=${funcionario.codigo})}"><i class="material-icons left">edit</i> </a> </td>
 					<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarFuncionario(codigo=${funcionario.codigo})}"><i class="material-icons left">delete</i></a></td>

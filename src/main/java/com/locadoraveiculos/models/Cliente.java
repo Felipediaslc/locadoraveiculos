@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  * Classe que representa a abstração de todos os clientes do sistema,
@@ -24,20 +25,23 @@ public class Cliente implements Serializable {
 	private long codigo;
 
 	private String nome;
-	private String cpf;
-	private String cnpj;
+	private String numerodocumento;
+	private String tipodocumento;
 	private String rg;
-	private String dataNascimento;
+	private String datanascimento;
 	private String naturalidade;
-	private String endRua;
-	private String endNumero;
-	private String endComplemento;
-	private String endBairro;
-	private String endCidade;
-	private String endUnidadeFederativa;
-	private String endCep;
+	private String endrua;
+	private String endnumero;
+	private String endcomplemento;
+	private String endbairro;
+	private String endcidade;
+	private String endunidadefederativa;
+	private String endcep;
 	private String telefone;
 	private String email;
+
+	@OneToOne
+	private Locacao locacao;
 
 	public long getCodigo() {
 		return codigo;
@@ -55,20 +59,20 @@ public class Cliente implements Serializable {
 		this.nome = nome;
 	}
 
-	public String getCpf() {
-		return cpf;
+	public String getNumerodocumento() {
+		return numerodocumento;
 	}
 
-	public void setCpf(String cpf) {
-		this.cpf = cpf;
+	public void setNumerodocumento(String numerodocumento) {
+		this.numerodocumento = numerodocumento;
 	}
 
-	public String getCnpj() {
-		return cnpj;
+	public String getTipodocumento() {
+		return tipodocumento;
 	}
 
-	public void setCnpj(String cnpj) {
-		this.cnpj = cnpj;
+	public void setTipodocumento(String tipodocumento) {
+		this.tipodocumento = tipodocumento;
 	}
 
 	public String getRg() {
@@ -79,12 +83,12 @@ public class Cliente implements Serializable {
 		this.rg = rg;
 	}
 
-	public String getDataNascimento() {
-		return dataNascimento;
+	public String getDatanascimento() {
+		return datanascimento;
 	}
 
-	public void setDataNascimento(String dataNascimento) {
-		this.dataNascimento = dataNascimento;
+	public void setDatanascimento(String datanascimento) {
+		this.datanascimento = datanascimento;
 	}
 
 	public String getNaturalidade() {
@@ -95,60 +99,60 @@ public class Cliente implements Serializable {
 		this.naturalidade = naturalidade;
 	}
 
-	public String getEndRua() {
-		return endRua;
+	public String getEndrua() {
+		return endrua;
 	}
 
-	public void setEndRua(String endRua) {
-		this.endRua = endRua;
+	public void setEndrua(String endrua) {
+		this.endrua = endrua;
 	}
 
-	public String getEndNumero() {
-		return endNumero;
+	public String getEndnumero() {
+		return endnumero;
 	}
 
-	public void setEndNumero(String endNumero) {
-		this.endNumero = endNumero;
+	public void setEndnumero(String endnumero) {
+		this.endnumero = endnumero;
 	}
 
-	public String getEndComplemento() {
-		return endComplemento;
+	public String getEndcomplemento() {
+		return endcomplemento;
 	}
 
-	public void setEndComplemento(String endComplemento) {
-		this.endComplemento = endComplemento;
+	public void setEndcomplemento(String endcomplemento) {
+		this.endcomplemento = endcomplemento;
 	}
 
-	public String getEndBairro() {
-		return endBairro;
+	public String getEndbairro() {
+		return endbairro;
 	}
 
-	public void setEndBairro(String endBairro) {
-		this.endBairro = endBairro;
+	public void setEndbairro(String endbairro) {
+		this.endbairro = endbairro;
 	}
 
-	public String getEndCidade() {
-		return endCidade;
+	public String getEndcidade() {
+		return endcidade;
 	}
 
-	public void setEndCidade(String endCidade) {
-		this.endCidade = endCidade;
+	public void setEndcidade(String endcidade) {
+		this.endcidade = endcidade;
 	}
 
-	public String getEndUnidadeFederativa() {
-		return endUnidadeFederativa;
+	public String getEndunidadefederativa() {
+		return endunidadefederativa;
 	}
 
-	public void setEndUnidadeFederativa(String endUnidadeFederativa) {
-		this.endUnidadeFederativa = endUnidadeFederativa;
+	public void setEndunidadefederativa(String endunidadefederativa) {
+		this.endunidadefederativa = endunidadefederativa;
 	}
 
-	public String getEndCep() {
-		return endCep;
+	public String getEndcep() {
+		return endcep;
 	}
 
-	public void setEndCep(String endCep) {
-		this.endCep = endCep;
+	public void setEndcep(String endcep) {
+		this.endcep = endcep;
 	}
 
 	public String getTelefone() {
@@ -167,4 +171,11 @@ public class Cliente implements Serializable {
 		this.email = email;
 	}
 
+	public Locacao getLocacao() {
+		return locacao;
+	}
+
+	public void setLocacao(Locacao locacao) {
+		this.locacao = locacao;
+	}
 }

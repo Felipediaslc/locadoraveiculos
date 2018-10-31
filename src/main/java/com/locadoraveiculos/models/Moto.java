@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  * Classe que representa a abstração de todas as motos do sistema.
@@ -28,17 +29,20 @@ public class Moto implements Serializable {
 	private String modelo;
 	private String marca;
 	private String potencia;
-	private String anoFab;
-	private String anoMod;
+	private String anofab;
+	private String anomod;
 	private String cor;
-	private boolean combGasolina;
-	private boolean combEtanol;
+	private boolean combgasolina;
+	private boolean combetanol;
 	private boolean abs;
-	private String dataAquisicao;
+	private String dataaquisicao;
 	private String localizacao;
-	private String porcentNivelComb;
+	private String porcentnivelcomb;
 	private boolean gps;
 	private boolean alarme;
+
+	@OneToOne
+	private Locacao locacao;
 
 	public long getCodigo() {
 		return codigo;
@@ -96,20 +100,20 @@ public class Moto implements Serializable {
 		this.potencia = potencia;
 	}
 
-	public String getAnoFab() {
-		return anoFab;
+	public String getAnofab() {
+		return anofab;
 	}
 
-	public void setAnoFab(String anoFab) {
-		this.anoFab = anoFab;
+	public void setAnofab(String anofab) {
+		this.anofab = anofab;
 	}
 
-	public String getAnoMod() {
-		return anoMod;
+	public String getAnomod() {
+		return anomod;
 	}
 
-	public void setAnoMod(String anoMod) {
-		this.anoMod = anoMod;
+	public void setAnomod(String anomod) {
+		this.anomod = anomod;
 	}
 
 	public String getCor() {
@@ -120,20 +124,20 @@ public class Moto implements Serializable {
 		this.cor = cor;
 	}
 
-	public boolean isCombGasolina() {
-		return combGasolina;
+	public boolean isCombgasolina() {
+		return combgasolina;
 	}
 
-	public void setCombGasolina(boolean combGasolina) {
-		this.combGasolina = combGasolina;
+	public void setCombgasolina(boolean combgasolina) {
+		this.combgasolina = combgasolina;
 	}
 
-	public boolean isCombEtanol() {
-		return combEtanol;
+	public boolean isCombetanol() {
+		return combetanol;
 	}
 
-	public void setCombEtanol(boolean combEtanol) {
-		this.combEtanol = combEtanol;
+	public void setCombetanol(boolean combetanol) {
+		this.combetanol = combetanol;
 	}
 
 	public boolean isAbs() {
@@ -144,12 +148,12 @@ public class Moto implements Serializable {
 		this.abs = abs;
 	}
 
-	public String getDataAquisicao() {
-		return dataAquisicao;
+	public String getDataaquisicao() {
+		return dataaquisicao;
 	}
 
-	public void setDataAquisicao(String dataAquisicao) {
-		this.dataAquisicao = dataAquisicao;
+	public void setDataaquisicao(String dataaquisicao) {
+		this.dataaquisicao = dataaquisicao;
 	}
 
 	public String getLocalizacao() {
@@ -160,12 +164,12 @@ public class Moto implements Serializable {
 		this.localizacao = localizacao;
 	}
 
-	public String getPorcentNivelComb() {
-		return porcentNivelComb;
+	public String getPorcentnivelcomb() {
+		return porcentnivelcomb;
 	}
 
-	public void setPorcentNivelComb(String porcentNivelComb) {
-		this.porcentNivelComb = porcentNivelComb;
+	public void setPorcentnivelcomb(String porcentnivelcomb) {
+		this.porcentnivelcomb = porcentnivelcomb;
 	}
 
 	public boolean isGps() {
@@ -184,4 +188,11 @@ public class Moto implements Serializable {
 		this.alarme = alarme;
 	}
 
+	public Locacao getLocacao() {
+		return locacao;
+	}
+
+	public void setLocacao(Locacao locacao) {
+		this.locacao = locacao;
+	}
 }

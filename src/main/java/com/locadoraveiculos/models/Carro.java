@@ -6,7 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-
+import javax.persistence.OneToOne;
 import org.hibernate.annotations.Type;
 
 /**
@@ -27,32 +27,35 @@ public class Carro implements Serializable {
 	private String modelo;
 	private String marca;
 	private String potencia;
-	private String anoFab;
-	private String anoMod;
+	private String anofab;
+	private String anomod;
 	private String cor;
 	@Type(type = "numeric_boolean")
-	private boolean combGasolina;
+	private boolean combgasolina;
 	@Type(type = "numeric_boolean")
-	private boolean combEtanol;
+	private boolean combetanol;
 	@Type(type = "numeric_boolean")
 	private boolean abs;
-	private String dataAquisicao;
+	private String dataaquisicao;
 	private String localizacao;
-	private String porcentNivelComb;
+	private String porcentnivelcomb;
 	@Type(type = "numeric_boolean")
-	private boolean combDiesel;
+	private boolean combdiesel;
 	@Type(type = "numeric_boolean")
-	private boolean combGnv;
+	private boolean combgnv;
 	@Type(type = "numeric_boolean")
-	private boolean arCondicionado;
+	private boolean arcondicionado;
 	@Type(type = "numeric_boolean")
-	private boolean vidroEletrico;
+	private boolean vidroeletrico;
 	@Type(type = "numeric_boolean")
 	private boolean gps;
 	@Type(type = "numeric_boolean")
 	private boolean travas;
 	@Type(type = "numeric_boolean")
 	private boolean alarme;
+	
+	@OneToOne
+	private Locacao locacao;
 
 	public long getCodigo() {
 		return codigo;
@@ -94,20 +97,20 @@ public class Carro implements Serializable {
 		this.potencia = potencia;
 	}
 
-	public String getAnoFab() {
-		return anoFab;
+	public String getAnofab() {
+		return anofab;
 	}
 
-	public void setAnoFab(String anoFab) {
-		this.anoFab = anoFab;
+	public void setAnofab(String anofab) {
+		this.anofab = anofab;
 	}
 
-	public String getAnoMod() {
-		return anoMod;
+	public String getAnomod() {
+		return anomod;
 	}
 
-	public void setAnoMod(String anoMod) {
-		this.anoMod = anoMod;
+	public void setAnomod(String anomod) {
+		this.anomod = anomod;
 	}
 
 	public String getCor() {
@@ -118,20 +121,20 @@ public class Carro implements Serializable {
 		this.cor = cor;
 	}
 
-	public Boolean getCombGasolina() {
-		return combGasolina;
+	public boolean isCombgasolina() {
+		return combgasolina;
 	}
 
-	public void setCombGasolina(Boolean combGasolina) {
-		this.combGasolina = combGasolina;
+	public void setCombgasolina(boolean combgasolina) {
+		this.combgasolina = combgasolina;
 	}
 
-	public boolean isCombEtanol() {
-		return combEtanol;
+	public boolean isCombetanol() {
+		return combetanol;
 	}
 
-	public void setCombEtanol(boolean combEtanol) {
-		this.combEtanol = combEtanol;
+	public void setCombetanol(boolean combetanol) {
+		this.combetanol = combetanol;
 	}
 
 	public boolean isAbs() {
@@ -142,12 +145,12 @@ public class Carro implements Serializable {
 		this.abs = abs;
 	}
 
-	public String getDataAquisicao() {
-		return dataAquisicao;
+	public String getDataaquisicao() {
+		return dataaquisicao;
 	}
 
-	public void setDataAquisicao(String dataAquisicao) {
-		this.dataAquisicao = dataAquisicao;
+	public void setDataaquisicao(String dataaquisicao) {
+		this.dataaquisicao = dataaquisicao;
 	}
 
 	public String getLocalizacao() {
@@ -158,44 +161,44 @@ public class Carro implements Serializable {
 		this.localizacao = localizacao;
 	}
 
-	public String getPorcentNivelComb() {
-		return porcentNivelComb;
+	public String getPorcentnivelcomb() {
+		return porcentnivelcomb;
 	}
 
-	public void setPorcentNivelComb(String porcentNivelComb) {
-		this.porcentNivelComb = porcentNivelComb;
+	public void setPorcentnivelcomb(String porcentnivelcomb) {
+		this.porcentnivelcomb = porcentnivelcomb;
 	}
 
-	public boolean isCombDiesel() {
-		return combDiesel;
+	public boolean isCombdiesel() {
+		return combdiesel;
 	}
 
-	public void setCombDiesel(boolean combDiesel) {
-		this.combDiesel = combDiesel;
+	public void setCombdiesel(boolean combdiesel) {
+		this.combdiesel = combdiesel;
 	}
 
-	public boolean isCombGnv() {
-		return combGnv;
+	public boolean isCombgnv() {
+		return combgnv;
 	}
 
-	public void setCombGnv(boolean combGnv) {
-		this.combGnv = combGnv;
+	public void setCombgnv(boolean combgnv) {
+		this.combgnv = combgnv;
 	}
 
-	public boolean isArCondicionado() {
-		return arCondicionado;
+	public boolean isArcondicionado() {
+		return arcondicionado;
 	}
 
-	public void setArCondicionado(boolean arCondicionado) {
-		this.arCondicionado = arCondicionado;
+	public void setArcondicionado(boolean arcondicionado) {
+		this.arcondicionado = arcondicionado;
 	}
 
-	public boolean isVidroEletrico() {
-		return vidroEletrico;
+	public boolean isVidroeletrico() {
+		return vidroeletrico;
 	}
 
-	public void setVidroEletrico(boolean vidroEletrico) {
-		this.vidroEletrico = vidroEletrico;
+	public void setVidroeletrico(boolean vidroeletrico) {
+		this.vidroeletrico = vidroeletrico;
 	}
 
 	public boolean isGps() {
@@ -221,5 +224,4 @@ public class Carro implements Serializable {
 	public void setAlarme(boolean alarme) {
 		this.alarme = alarme;
 	}
-
 }

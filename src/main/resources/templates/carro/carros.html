@@ -31,18 +31,12 @@
 	<table class="container">
 	
 	<thead>
-		<tr>
-			
+		<tr>			
 			<th>Modelo</th>
-			<th>Marca</th>
-			<th>Renavam</th>
+			<th>Marca</th>			
 			<th>Potência</th>
-			<th>Ano Fabricação</th>
 			<th>Ano Modelo</th>
 			<th>Cor</th>
-			<th>Localização</th>
-			<th>Nível de Combustível</th>
-			<th>Data Aquisição</th>
 			<th>Gasolina</th>
 			<th>Etanol</th>
 			<th>Diesel</th>
@@ -53,6 +47,7 @@
 			<th>GPS</th>
 			<th>Travas</th>
 			<th>Alarme</th>
+			<th>Visualizar</th>
 			<th>Editar</th>
 			<th>Deletar</th>
 		</tr>
@@ -61,24 +56,20 @@
 		<tr th:each="carro : ${carros}">		
 			<td><span th:text="${carro.modelo}"></span></td>
 			<td><span th:text="${carro.marca}"></span></td>
-			<td><span th:text="${carro.renavam}"></span></td>
 			<td><span th:text="${carro.potencia}"></span></td>
-			<td><span th:text="${carro.anoFab}"></span></td>
-			<td><span th:text="${carro.anoMod}"></span></td>
+			<td><span th:text="${carro.anomod}"></span></td>
 			<td><span th:text="${carro.cor}"></span></td>
-			<td><span th:text="${carro.localizacao}"></span></td>
-			<td><span th:text="${carro.porcentNivelComb}"></span></td>
-			<td><span th:text="${carro.dataAquisicao}"></span></td>
-			<td><span th:text="${carro.combGasolina}"></span></td>
-			<td><span th:text="${carro.combEtanol}"></span></td>
-			<td><span th:text="${carro.combDiesel}"></span></td>
-			<td><span th:text="${carro.combGnv}"></span></td>
-			<td><span th:text="${carro.abs}"></span></td>
-			<td><span th:text="${carro.arCondicionado}"></span></td>
-			<td><span th:text="${carro.vidroEletrico}"></span></td>
-			<td><span th:text="${carro.gps}"></span></td>
-			<td><span th:text="${carro.travas}"></span></td>
-			<td><span th:text="${carro.alarme}"></span></td>
+			<td><span th:text="${true == carro.combgasolina ? 'Sim' : 'Não' }"></span></td> 
+			<td><span th:text="${true == carro.combetanol ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.combdiesel ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.combgnv ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.abs ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.arcondicionado ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.vidroeletrico ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.gps ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.travas ? 'Sim' : 'Não' }"></span></td>
+			<td><span th:text="${true == carro.alarme ? 'Sim' : 'Não' }"></span></td>
+			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/visualizarCarro(codigo=${carro.codigo})}"><i class="material-icons left">view_agenda</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/editarCarro(codigo=${carro.codigo})}"><i class="material-icons left">edit</i> </a> </td>
 			<td><a class="waves-effect waves-light btn-small" href="#" th:href="@{/deletarCarro(codigo=${carro.codigo})}"><i class="material-icons left">delete</i></a></td>
 		</tr>

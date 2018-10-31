@@ -17,7 +17,7 @@ public class CarroController {
 
 	@RequestMapping(value = "/cadastrarCarro", method = RequestMethod.GET)
 	public String cadastrarCarro() {
-		return "carro/formCarro";
+		return "carro/formCadastrarCarro";
 	}
 
 	@RequestMapping(value = "/cadastrarCarro", method = RequestMethod.POST)
@@ -28,10 +28,10 @@ public class CarroController {
 
 	@RequestMapping("/carros")
 	public ModelAndView listaCarros() {
-	ModelAndView mv = new ModelAndView("carro/carros");
-	Iterable<Carro> carros = cr.findAll();
-	mv.addObject("carros", carros);
-	return mv;
+		ModelAndView mv = new ModelAndView("carro/carros");
+		Iterable<Carro> carros = cr.findAll();
+		mv.addObject("carros", carros);
+		return mv;
 	}
 	
 	@RequestMapping("/deletarCarro")
@@ -48,6 +48,15 @@ public class CarroController {
 		m.setViewName("/carro/formEditarCarro");
 		m.addObject("carro", carro);
 		return m;	
+	}
+	
+	@RequestMapping(value = "/visualizarCarro", method = RequestMethod.GET)
+	public ModelAndView visualizarCarro(@ModelAttribute("codigo") long codigo) {
+		Carro carro = cr.findByCodigo(codigo);		
+		ModelAndView m = new ModelAndView();
+		m.setViewName("/carro/formVisualizarCarro");
+		m.addObject("carro", carro);
+		return m;
 	}
 
 }

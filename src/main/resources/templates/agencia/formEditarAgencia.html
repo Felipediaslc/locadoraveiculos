@@ -15,6 +15,13 @@
 <title>Cadastrar Agencias</title>
 </head>
 
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var elems = document.querySelectorAll('select');
+    var instances = M.FormSelect.init(elems, options);
+  });
+</script>
+
 <body>
 	<header>
 		<nav>
@@ -30,7 +37,7 @@
 
 	<form class="container" method="post" action="cadastrarAgencia">
 			<input type="hidden" th:value="${agencia.codigo}" name="codigo"/>
-			Nome Fantasia: <input type="text" th:value="${agencia.nomeFantasia}" name="nomeFantasia" />
+			Nome Fantasia: <input type="text" th:value="${agencia.nomefantasia}" name="nomefantasia" />
 			<div class="row">
 			<div class="input-field col s6">
 			Telefone: <input type="text" th:value="${agencia.telefone}" name="telefone" />
@@ -39,31 +46,62 @@
 			CNPJ: <input type="text" th:value="${agencia.cnpj}" name="cnpj" />
 			</div>
 			<div class="input-field col s4">
-			Inscrição Estadual: <input type="text" th:value="${agencia.inscEstadual}" name="inscEstadual" />
+			Inscrição Estadual: <input type="text" th:value="${agencia.inscricaoestadual}" name="inscricaoestadual" />
 			</div>
 			<div class="input-field col s8">
-			Gerente Responsável: <input type="text" th:value="${agencia.gerenteResponsavel}" name="gerenteResponsavel" />						
+			Gerente Responsável: <input type="text" th:value="${agencia.gerenteresponsavel}" name="gerenteresponsavel" />						
 			</div>
 			<div class="input-field col s5">			
-			Rua: <input type="text" th:value="${agencia.endRua}" name="endRua" />
+			Rua: <input type="text" th:value="${agencia.endrua}" name="endrua" />
 			</div>
 			<div class="input-field col s1">
-			Número: <input type="text" th:value="${agencia.endNumero}" name="endNumero" />
+			Número: <input type="text" th:value="${agencia.endnumero}" name="endnumero" />
 			</div>
 			<div class="input-field col s4">
-			Complemento: <input type="text" th:value="${agencia.endComplemento}" name="endComplemento" />
+			Complemento: <input type="text" th:value="${agencia.endcomplemento}" name="endcomplemento" />
 			</div>
 			<div class="input-field col s2">
-			Bairro: <input type="text" th:value="${agencia.endBairro}" name="endBairro" />
+			Bairro: <input type="text" th:value="${agencia.endbairro}" name="endbairro" />
 			</div>
 			<div class="input-field col s4">
-			Cidade: <input type="text" th:value="${agencia.endCidade}" name="endCidade" />
+			Cidade: <input type="text" th:value="${agencia.endcidade}" name="endcidade" />
 			</div>
+			<div class="input-field col s3"> 
+			Estado
+			<p>				    
+			  <select class="browser-default" name="endunidadefederativa">				    
+			    <option th:selected='${agencia.endunidadefederativa.equals("AC")}'value="AC">Acre</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("AL")}'value="AL">Alagoas</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("AP")}'value="AP">Amapá</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("AM")}'value="AM">Amazonas</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("BA")}'value="BA">Bahia</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("CE")}'value="CE">Ceará</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("DF")}'value="DF">Distrito Federal</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("ES")}'value="ES">Espírito Santo</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("GO")}'value="GO">Goiás</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("MA")}'value="MA">Maranhão</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("MT")}'value="MT">Mato Grosso</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("MS")}'value="MS">Mato Grosso do Sul</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("MG")}'value="MG">Minas Gerais</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("PA")}'value="PA">Pará</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("PB")}'value="PB">Paraíba</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("PR")}'value="PR">Paraná</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("PE")}'value="PE">Pernambuco</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("PI")}'value="PI">Piauí</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("RJ")}'value="RJ">Rio de Janeiro</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("RN")}'value="RN">Rio Grande do Norte</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("RS")}'value="RS">Rio Grande do Sul</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("RO")}'value="RO">Rondônia</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("RR")}'value="RR">Roraima</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("SC")}'value="SC">Santa Catarina</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("SP")}'value="SP">São Paulo</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("SE")}'value="SE">Sergipe</option>
+				<option th:selected='${agencia.endunidadefederativa.equals("TO")}'value="TO">Tocantins</option>				    
+			  </select>
+			<p/>				    				   
+			</div>	
 			<div class="input-field col s2">
-			Unidade Federativa:<input type="text" th:value="${agencia.endUnidadeFederativa}" name="endUnidadeFederativa" />
-			</div>
-			<div class="input-field col s2">
-			CEP: <input type="text" th:value="${agencia.endCep}" name="endCep" />
+			CEP: <input type="text" th:value="${agencia.endcep}" name="endcep" />
 			</div>
 		</div>
 		<button class="waves-effect waves-light btn" type="submit"><i class="material-icons left">save</i>Salvar</button>
